@@ -10,10 +10,7 @@
 	<body>
 		<div class = "container" ng-controller="AppCtrl">
 			<div class = "bg-primary" align="center">
-				<h1> Daniel Eleazar Limas <h1>
-				<h5>4752 52nd DR</h5>
-				<h5>Maywood, CA, 90270</h5>
-				<h5>(323)381-9444</h5>
+				<h1><p ng-click = "admin = true" ng-init="admin = false"> Daniel Eleazar Limas </p> <h1>
 				<h5>limasdaniel@ymail.com</h5>
 			</div>
 			
@@ -24,8 +21,11 @@
 				<div ng-repeat = "edu in resume | filter:type1 track by $index">
 						<td>{{edu.school}}</td>
 						<td>{{edu.degree}}</td>
-						<td>{{edu.last_year}}</td>
-								
+						<td>{{edu.last_year}}</td>		
+				</div>
+				<div ng-if="admin == true">
+					<input type="text" />
+				
 				</div>
 			</div>
 			<br/>
@@ -48,9 +48,10 @@
 				</div>
 			</div>
 		</div>
-		<a href="admin.html" class="btn bt-success">edit</a>
+		
 	</body>
 	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script src = "controllers/controller.js"></script>
+	
 
 </html>

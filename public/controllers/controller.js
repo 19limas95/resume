@@ -18,5 +18,3 @@ myApp.controller('AppCtrl', ['$scope','$http',
 	});
 		
 }]);
-//cd \Program Files\MongoDB\Server\3.2\bin
-//cd \Desktop\nodeProject\contactlist
