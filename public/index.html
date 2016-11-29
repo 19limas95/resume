@@ -17,14 +17,11 @@
 			<!--Education-->
 			<div>
 				<h2 class = "bg-warning">Education</h2>
-				<input type="hidden"value="edu" ng-model="type1">
-				<div ng-repeat = "edu in resume | filter:type1 track by $index">
-						<td>{{edu.school}}</td>
-						<td>{{edu.degree}}</td>
-						<td>{{edu.last_year}}</td>		
-				</div>
-				<div ng-if="admin == true">
-					<input type="text" />
+				<input type="hidden" value="edu" ng-model="type1">
+				<div ng-repeat = "edu in resume | filter:edu track by $index">
+						<b>{{edu.school}}<text ng-if="edu.type == 'edu'">:</text></b>
+						{{edu.degree}}
+						{{edu.last_year}}	
 				
 				</div>
 			</div>
@@ -43,8 +40,10 @@
 				<h2 class = "bg-info">Projects</h2>
 				<input type="hidden" value="project" ng-model="type3">
 				<div ng-repeat = "project in resume | filter:type3 track by $index">
-						<td>{{project.title}}</td>		
-						<td>{{project.description}}</td>	
+					<div>	
+						<b>{{project.title}}</b><text ng-if="project.type == 'project'">:</text>
+						{{project.description}}
+					</div>
 				</div>
 			</div>
 		</div>
