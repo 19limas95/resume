@@ -27,5 +27,3 @@ app.post('/resume',function(req,res){
 app.listen(8080);
 console.log("Server running port 8080");
 
-//cd \Program Files\MongoDB\Server\3.2\bin
-//cd \Desktop\nodeProject\contactlist
